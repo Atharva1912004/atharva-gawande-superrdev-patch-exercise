@@ -1,5 +1,3 @@
-# NOTES.md
-
 ## Summary of Changes
 
 I focused on fixing issues that had the biggest impact on functionality and user experience.
