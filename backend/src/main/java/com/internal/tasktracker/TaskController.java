@@ -22,11 +22,9 @@ public class TaskController {
         @RequestParam(required = false, defaultValue = "1") int page,
         @RequestParam(required = false, defaultValue = "10") int pageSize) {
 
-        // Normalize query input
         String query = q == null ? "" : q.trim();
         String searchTerm = "%" + query.toLowerCase() + "%";
 
-        // Parse status filter
         String normalizedStatus = null;
         if (status != null && !status.isEmpty()) {
             normalizedStatus = TaskStatus.valueOf(status.toUpperCase()).name();
